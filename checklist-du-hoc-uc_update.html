@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist Du Học Úc 🇦🇺</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Nhận diện USyd: Charcoal cho Sidebar, Red cho Accent */
+  --sb:#1c1c1c;--sb-h:#2a2a2a;--sb-a:#3a3a3a;--sb-t:rgba(255,255,255,.85);--sb-m:rgba(255,255,255,.45);
+  --acc:#e64626; /* Sydney Red */
+  --bg:#f4f4f4;--sf:#fff;--sf2:#fafafa;
+  --tx:#1a1a1a;--tx2:#555;--tx3:#999;
+  --bd:#e0e0e0;--bd2:#ebebeb;
+  
+  /* Semantic Colors */
+  --red:#d32f2f;--rbg:#fdebea;--rbd:#f9c8c5;
+  --ylw:#e67e22;--ybg:#fdf3e8;--ybd:#f7d7b5;
+  --grn:#2e7d32;--gbg:#e8f5e9;--gbd:#c8e6c9;
+  
+  --gd:#e64626; /* Global Accent (Sydney Red) */
+  --sh:0 2px 14px rgba(0,0,0,.06);--sh2:0 1px 4px rgba(0,0,0,.04);
+  --r:10px;--rs:6px;--rx:4px;
+  --fn:'Be Vietnam Pro',sans-serif;
+}
+[data-dark]{
+  --bg:#121212;--sf:#1c1c1c;--sf2:#242424;
+  --tx:#e0e0e0;--tx2:#9e9e9e;--tx3:#757575;
+  --bd:#333;--bd2:#2a2a2a;
+  --sb:#0a0a0a;--sb-h:#1a1a1a;--sb-a:#2a2a2a;
+  --rbg:#3a1616;--rbd:#5c2424;
+  --ybg:#3b2612;--ybd:#5c3a1c;
+  --gbg:#162b1a;--gbd:#244a2b;
+  --sh:0 2px 14px rgba(0,0,0,.4);
+}
+html,body{height:100%;font-family:var(--fn);background:var(--bg);color:var(--tx);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+button{font-family:var(--fn);cursor:pointer}
+
+.layout{display:flex;min-height:100vh}
+.sidebar{width:254px;flex-shrink:0;background:var(--sb);display:flex;flex-direction:column;position:fixed;inset:0 auto 0 0;overflow-y:auto;z-index:200;transition:transform .25s cubic-bezier(.4,0,.2,1)}
+.main{margin-left:254px;flex:1;padding:28px 32px 64px;max-width:920px}
+
+/* SIDEBAR */
+.sb-head{padding:20px 18px 14px;border-bottom:1px solid rgba(255,255,255,.07)}
+.sb-logo{display:flex;align-items:center;gap:10px}
+.sb-icon{width:32px;height:32px;border-radius:8px;background:var(--acc);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
+.sb-ttl{font-size:12px;font-weight:700;color:#fff;letter-spacing:.02em;line-height:1.25}
+.sb-sub{font-size:10px;color:var(--sb-m)}
+.sb-glob{padding:10px 18px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+.sg-lbl{font-size:9px;color:var(--sb-m);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+.sg-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.sg-n{font-size:12px;font-weight:600;color:#fff}
+.sg-p{font-size:11px;color:var(--acc);font-weight:600}
+.sg-bar{background:rgba(255,255,255,.1);border-radius:3px;height:3px;overflow:hidden}
+.sg-fill{height:100%;background:var(--acc);border-radius:3px;transition:width .4s}
+.sb-nav{padding:8px 0 6px;flex:1}
+.sb-sec{padding:10px 18px 3px;font-size:9px;color:var(--sb-m);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.ni{display:flex;align-items:center;gap:9px;padding:8px 18px;cursor:pointer;position:relative;transition:background .12s;border:none;background:none;width:100%;text-align:left}
+.ni:hover{background:var(--sb-h)}
+.ni.on{background:var(--sb-a)}
+.ni.on::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:22px;background:var(--acc);border-radius:0 3px 3px 0}
+.ni-b{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:700;flex-shrink:0;line-height:1}
+.ni-body{flex:1;min-width:0}
+.ni-n{font-size:11.5px;font-weight:500;color:var(--sb-t);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ni-p{font-size:9.5px;color:var(--sb-m);margin-top:1px}
+.ni-bw{width:32px;flex-shrink:0}
+.ni-bar{background:rgba(255,255,255,.1);border-radius:2px;height:2.5px;overflow:hidden}
+.ni-bf{height:100%;background:rgba(255,255,255,.4);border-radius:2px;transition:width .3s}
+.ni-bf.dn{background:var(--acc)}
+.sb-foot{padding:10px 18px;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:6px;flex-wrap:wrap}
+.sb-fb{flex:1;min-width:55px;background:rgba(255,255,255,.06);border:none;border-radius:var(--rs);padding:6px 4px;font-size:10.5px;font-weight:500;color:var(--sb-m);transition:all .12s;white-space:nowrap}
+.sb-fb:hover{background:rgba(255,255,255,.12);color:rgba(255,255,255,.8)}
+
+/* MAIN */
+.view{display:none}.view.on{display:block}
+
+/* PAGE HEADER */
+.ph{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.ph-t{font-size:20px;font-weight:700;color:var(--tx);line-height:1.2;margin-bottom:3px}
+.ph-s{font-size:13px;color:var(--tx2)}
+.hbs{display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:6px 13px;border-radius:var(--rs);border:1.5px solid var(--bd);background:var(--sf);font-size:12px;font-weight:500;color:var(--tx2);transition:all .12s;white-space:nowrap}
+.btn:hover{border-color:var(--tx3);color:var(--tx);background:var(--bg)}
+.btn-dk{background:var(--sb);color:#fff;border-color:var(--sb)}
+.btn-dk:hover{background:var(--sb-a);border-color:var(--sb-a);color:#fff}
+.btn-rd{border-color:var(--rbd);color:var(--red);background:var(--rbg)}
+.btn-rd:hover{background:#fde0de;border-color:var(--red)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:11px;margin-bottom:22px}
+.stat{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:15px 16px;box-shadow:var(--sh2)}
+.st-l{font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.st-v{font-size:26px;font-weight:700;line-height:1;margin-bottom:2px}
+.st-v span{font-size:14px;color:var(--tx3)}
+.st-n{font-size:11px;color:var(--tx2)}
+
+/* LEGEND */
+.leg{display:flex;flex-wrap:wrap;gap:14px;padding:11px 16px;background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:22px;box-shadow:var(--sh2)}
+.li{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--tx2)}
+.ld{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.card{background:var(--sf);border:1.5px solid var(--bd);border-radius:var(--r);padding:16px 14px;cursor:pointer;transition:all .15s;box-shadow:var(--sh2)}
+.card:hover{box-shadow:var(--sh);transform:translateY(-1px);border-color:#aaa}
+.card.dn{border-color:var(--ybd);background:var(--ybg)}
+.ci{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-bottom:11px}
+.cn{font-size:13.5px;font-weight:600;margin-bottom:2px;line-height:1.3;color:var(--tx)}
+.cd{font-size:11px;color:var(--tx2);margin-bottom:12px;line-height:1.4}
+.cr{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.cp{font-size:11px;color:var(--tx2);font-weight:500}
+.cx{font-size:11px;font-weight:600;color:var(--tx)}
+.cb{background:var(--bd2);border-radius:3px;height:3.5px;overflow:hidden}
+.cbf{height:100%;border-radius:3px;transition:width .35s;background:var(--acc)}
+.cbf.dn{background:var(--ylw)}
+
+/* DETAIL */
+.dh{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--bd);flex-wrap:wrap}
+.bk{display:inline-flex;align-items:center;gap:5px;border:1.5px solid var(--bd);border-radius:var(--rs);padding:5px 11px;font-size:11.5px;font-weight:500;color:var(--tx2);background:var(--sf);transition:all .12s}
+.bk:hover{border-color:var(--tx3);color:var(--tx)}
+.di{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.dinfo{flex:1;min-width:0}
+.dt{font-size:18px;font-weight:700;color:var(--tx)}
+.ds{font-size:12px;color:var(--tx2)}
+.dp{text-align:right;flex-shrink:0}
+.dn2{font-size:18px;font-weight:700;color:var(--tx)}
+.dpx{font-size:11px;color:var(--tx2)}
+.db{background:var(--bd2);border-radius:4px;height:5px;overflow:hidden;margin-bottom:18px}
+.dbf{height:100%;border-radius:4px;transition:width .3s;background:var(--acc)}
+.dbf.dn{background:var(--ylw)}
+
+/* WARN */
+.wb{display:flex;gap:9px;background:var(--ybg);border:1px solid var(--ybd);border-radius:var(--rs);padding:10px 14px;font-size:12px;color:var(--ylw);margin-bottom:18px;line-height:1.55}
+
+/* FILTER */
+.fb{display:flex;align-items:center;gap:7px;margin-bottom:18px;flex-wrap:wrap}
+.fbl{font-size:11.5px;font-weight:500;color:var(--tx2);margin-right:2px}
+.ft{padding:4px 11px;border-radius:20px;border:1.5px solid var(--bd);background:transparent;font-size:11.5px;font-weight:500;color:var(--tx2);transition:all .12s}
+.ft:hover{border-color:var(--tx3);color:var(--tx)}
+.ft.on{background:var(--sb);color:#fff;border-color:var(--sb)}
+.sr{flex:1;min-width:140px;max-width:240px;padding:5px 12px;border:1.5px solid var(--bd);border-radius:20px;background:var(--sf);font-size:12px;color:var(--tx);font-family:var(--fn);outline:none;transition:border-color .12s}
+.sr:focus{border-color:var(--sb-a)}
+.sr::placeholder{color:var(--tx3)}
+
+/* ITEMS */
+.items{display:flex;flex-direction:column}
+.item{display:flex;align-items:flex-start;gap:9px;padding:9px 10px;border-radius:var(--rs);cursor:pointer;transition:background .1s;user-select:none;position:relative;}
+.item:hover{background:var(--sf2)}
+.item.hid{display:none}
+.chk{width:16px;height:16px;border-radius:4px;border:2px solid var(--bd);background:var(--sf);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:all .15s;pointer-events:none}
+.chk.on{background:var(--gd);border-color:var(--gd)}
+.chk svg{opacity:0;transition:opacity .1s}
+.chk.on svg{opacity:1}
+.ib{flex:1;min-width:0}
+.it{font-size:13px;color:var(--tx);line-height:1.45}
+.item.ck .it{text-decoration:line-through;opacity:.35}
+.in{font-size:11px;color:var(--tx2);margin-top:2px;line-height:1.45;white-space:pre-line}
+.item.ck .in{opacity:.35}
+.ibdg{flex-shrink:0;margin-top:2px;display:flex;gap:6px;align-items:center}
+.bdg{display:inline-block;font-size:9.5px;font-weight:600;padding:2px 6px;border-radius:3px;border:1px solid transparent;letter-spacing:.02em}
+.br{background:var(--rbg);color:var(--red);border-color:var(--rbd)}
+.bs{background:var(--ybg);color:var(--ylw);border-color:var(--ybd)}
+.bo{background:var(--gbg);color:var(--grn);border-color:var(--gbd)}
+.del-btn{background:none;border:none;color:var(--red);font-size:14px;cursor:pointer;opacity:0;transition:opacity 0.2s;padding:2px 6px;border-radius:4px;}
+.del-btn:hover{background:var(--rbg);}
+.item:hover .del-btn.custom-item {opacity:1;}
+.empty{text-align:center;padding:36px 20px;color:var(--tx2);font-size:13px}
+.df{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;padding-top:14px;border-top:1px solid var(--bd)}
+
+/* ADD NEW ITEM BOX */
+.add-box{background:var(--sf2);border:1.5px dashed var(--bd);border-radius:var(--rs);padding:14px;margin-top:14px;display:flex;flex-direction:column;gap:10px;transition:all 0.2s}
+.add-box:focus-within{border-color:var(--gd);background:var(--gbg)}
+.add-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.add-input{flex:1;min-width:180px;padding:8px 12px;border:1px solid var(--bd);border-radius:var(--rs);font-family:inherit;font-size:12px;background:var(--sf);color:var(--tx);outline:none;transition:border-color 0.15s}
+.add-input:focus{border-color:var(--sb-a)}
+.add-input::placeholder{color:var(--tx3)}
+.add-sel{padding:8px;border:1px solid var(--bd);border-radius:var(--rs);font-family:inherit;font-size:12px;background:var(--sf);color:var(--tx);cursor:pointer;outline:none}
+.add-title{font-size:11.5px;font-weight:600;color:var(--tx2);margin-bottom:-4px;}
+
+/* MODAL */
+.mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;align-items:center;justify-content:center;padding:20px}
+.mo.on{display:flex}
+.md{background:var(--sf);border-radius:var(--r);width:100%;max-width:640px;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.mh{padding:20px 24px 16px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.mt{font-size:16px;font-weight:700;color:var(--tx)}
+.mx{background:none;border:none;font-size:20px;color:var(--tx3);line-height:1;padding:4px 6px;border-radius:4px;transition:all .12s}
+.mx:hover{background:var(--sf2);color:var(--tx)}
+.mb{padding:20px 24px;overflow-y:auto;flex:1}
+.mf{padding:14px 24px;border-top:1px solid var(--bd);display:flex;gap:8px;justify-content:flex-end;flex-shrink:0;flex-wrap:wrap}
+.mnote{font-size:12px;color:var(--tx2);background:var(--sf2);border:1px solid var(--bd);border-radius:var(--rs);padding:10px 14px;margin-bottom:14px;line-height:1.65}
+.mnote code{background:var(--bd2);padding:1px 5px;border-radius:3px;font-size:11px;font-family:monospace}
+.fz{border:2px dashed var(--bd);border-radius:var(--rs);padding:20px;text-align:center;cursor:pointer;transition:all .15s;margin-bottom:14px;background:var(--sf2)}
+.fz:hover,.fz.dg{border-color:var(--gd);background:var(--gbg)}
+.fz input{display:none}
+.fz-ic{font-size:28px;margin-bottom:6px}
+.fz-t{font-size:13px;color:var(--tx2)}
+.fz-s{font-size:11px;color:var(--tx3);margin-top:3px}
+.or{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:11px;color:var(--tx3)}
+.or::before,.or::after{content:'';flex:1;height:1px;background:var(--bd)}
+.mta{width:100%;height:160px;border:1.5px solid var(--bd);border-radius:var(--rs);padding:10px 12px;font-family:monospace;font-size:11.5px;resize:vertical;background:var(--sf);color:var(--tx);outline:none;transition:border-color .12s}
+.mta:focus{border-color:var(--sb-a)}
+.mta::placeholder{color:var(--tx3)}
+.pr{margin-top:12px;font-size:12px;padding:8px 12px;border-radius:var(--rs);display:none}
+.pr.ok{color:var(--grn);background:var(--gbg);border:1px solid var(--gbd)}
+.pr.er{color:var(--red);background:var(--rbg);border:1px solid var(--rbd)}
+
+/* MOBILE */
+.mnb{display:none;position:fixed;top:12px;left:12px;z-index:300;width:38px;height:38px;background:var(--sb);border:none;border-radius:8px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4px}
+.mnb span{display:block;width:17px;height:2px;background:#fff;border-radius:1px}
+.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100}
+@media(max-width:768px){
+  .sidebar{transform:translateX(-100%)}
+  .sidebar.op{transform:translateX(0)}
+  .main{margin-left:0;padding:58px 16px 40px}
+  .mnb{display:flex}
+  .ov.on{display:block}
+  .cards{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  .ph{flex-direction:column;align-items:stretch}
+}
+@media print{
+  .sidebar,.mnb,.ov,.mo,.hbs,.fb,.df,.bk,.add-box{display:none!important}
+  .main{margin:0;padding:16px;max-width:100%}
+  .item{break-inside:avoid}
+}
+.sidebar::-webkit-scrollbar{width:3px}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:2px}
+</style>
+</head>
+<body>
+<button class="mnb" id="mnb"><span></span><span></span><span></span></button>
+<div class="ov" id="ov"></div>
+
+<!-- IMPORT JSON FILE (Hidden Input) -->
+<input type="file" id="fi-json" accept=".json" style="display:none" onchange="importData(this)">
+
+<!-- IMPORT MODAL -->
+<div class="mo" id="imod">
+  <div class="md">
+    <div class="mh">
+      <div class="mt">📂 Cập nhật nội dung checklist hàng loạt</div>
+      <button class="mx" onclick="closeImp()">×</button>
+    </div>
+    <div class="mb">
+      <div class="mnote">
+        <strong>Định dạng hỗ trợ:</strong> <code>.tsv</code> (Tab-separated) hoặc <code>.csv</code><br>
+        <strong>Cột bắt buộc:</strong> <code>Module</code> · <code>Chi tiết</code><br>
+        <strong>Cột tùy chọn:</strong> <code>Phân loại</code> (Bắt buộc / Nên có / Tùy chọn) · <code>Ghi chú</code> · <code>Cảnh báo module</code><br>
+        Hàng đầu tiên là tiêu đề (bỏ qua). Tiến độ đã tick sẽ giữ nguyên nếu tên module và nội dung khớp.
+      </div>
+      <div class="fz" id="fz" onclick="document.getElementById('fi').click()">
+        <input type="file" id="fi" accept=".csv,.tsv,.txt">
+        <div class="fz-ic">📄</div>
+        <div class="fz-t">Nhấn để chọn file hoặc kéo thả vào đây</div>
+        <div class="fz-s">.csv · .tsv · .txt — Tab-separated hoặc comma-separated</div>
+      </div>
+      <div class="or">hoặc dán trực tiếp</div>
+      <textarea class="mta" id="pta" placeholder="Dán nội dung TSV/CSV vào đây...
+
+Ví dụ (dùng Tab giữa các cột):
+Module	Chi tiết	Phân loại	Ghi chú
+Giấy tờ & Hồ sơ	Hộ chiếu còn hiệu lực 6 tháng	Bắt buộc	Kiểm tra ngay
+Tài chính	Đổi tiền AUD trước khi đi	Bắt buộc"></textarea>
+      <div class="pr" id="pr"></div>
+    </div>
+    <div class="mf">
+      <button class="btn" onclick="previewImp()">🔍 Kiểm tra</button>
+      <button class="btn btn-dk" id="applyBtn" onclick="applyImp()" disabled style="opacity:.4">✓ Áp dụng</button>
+      <button class="btn btn-rd" onclick="closeImp()">Hủy</button>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar" id="sb">
+    <div class="sb-head">
+      <div class="sb-logo">
+        <div class="sb-icon">AU</div>
+        <div><div class="sb-ttl">Checklist Du Học Úc</div><div class="sb-sub">Bộ chuẩn bị toàn diện</div></div>
+      </div>
+    </div>
+    <div class="sb-glob">
+      <div class="sg-lbl">Tổng tiến độ</div>
+      <div class="sg-row"><div class="sg-n" id="glN">0/0</div><div class="sg-p" id="glP">0%</div></div>
+      <div class="sg-bar"><div class="sg-fill" id="glB" style="width:0%"></div></div>
+    </div>
+    <nav class="sb-nav" id="nav"></nav>
+    <div class="sb-foot">
+      <button class="sb-fb" onclick="openImp()" title="Nhập hàng loạt bằng CSV/TSV">📋 Import CSV</button>
+      <button class="sb-fb" onclick="toggleDark()" title="Đổi giao diện Sáng/Tối">🌙 Theme</button>
+      <button class="sb-fb" onclick="exportData()" title="Lưu trữ tiến độ hiện tại về máy">💾 Lưu File</button>
+      <button class="sb-fb" onclick="document.getElementById('fi-json').click()" title="Tải tiến độ từ file đã lưu">📂 Mở File</button>
+      <button class="sb-fb" onclick="window.print()">⎙ In</button>
+      <button class="sb-fb" onclick="doReset()">↺ Reset</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div id="vOv" class="view on">
+      <div class="ph">
+        <div><div class="ph-t">Checklist Du Học Úc 🇦🇺</div><div class="ph-s" id="ovSub">Đang tải...</div></div>
+        <div class="hbs">
+          <!-- Đã ẩn nút Lưu File và Import tại đây, thay bằng Theme -->
+          <button class="btn" onclick="toggleDark()">🌙 Theme</button>
+          <button class="btn btn-rd" onclick="doReset()">↺ Reset</button>
+        </div>
+      </div>
+      <div class="stats" id="stGrid"></div>
+      <div class="leg">
+        <div class="li"><div class="ld" style="background:var(--red)"></div><strong>BẮT BUỘC</strong>&nbsp;— Phải có, ảnh hưởng visa / nhập cảnh</div>
+        <div class="li"><div class="ld" style="background:var(--ylw)"></div><strong>NÊN CÓ</strong>&nbsp;— Rất khuyến khích</div>
+        <div class="li"><div class="ld" style="background:var(--grn)"></div><strong>TÙY CHỌN</strong>&nbsp;— Mang nếu có điều kiện</div>
+      </div>
+      <div class="cards" id="cGrid"></div>
+    </div>
+    <div id="vDets"></div>
+  </main>
+</div>
+
+<script>
+// ── DEFAULT DATA ─────────────────────────────────────────────
+const DEF=[
+  {id:'m1',abbr:'GT',title:'Giấy tờ & Hồ sơ',desc:'Giấy tờ pháp lý thiết yếu nhất',items:[
+    {t:'Hộ chiếu còn hiệu lực ít nhất 6 tháng',p:'r',n:'Kiểm tra ngay hôm nay!'},
+    {t:'Visa sinh viên Úc (Subclass 500) đã được cấp',p:'r'},
+    {t:'Confirmation of Enrolment (CoE) từ trường',p:'r'},
+    {t:'Bảo hiểm OSHC (Overseas Student Health Cover)',p:'r'},
+    {t:'Thư nhập học (Offer letter) từ trường',p:'r'},
+    {t:'Bằng cấp, bảng điểm — bản sao công chứng tiếng Anh',p:'r'},
+    {t:'Giấy khai sinh — bản sao công chứng tiếng Anh',p:'r'},
+    {t:'Sổ tiêm chủng / Hồ sơ y tế cá nhân',p:'r'},
+    {t:'Ảnh thẻ 3×4 và 4×6 khoảng 10–12 tấm',p:'s'},
+    {t:'Ghi sẵn địa chỉ chỗ ở tại Úc để khai nhập cảnh',p:'r'},
+    {t:'Scan tất cả giấy tờ — lưu Google Drive / iCloud',p:'r',n:'Luôn có bản dự phòng kỹ thuật số'},
+  ]},
+  {id:'m2',abbr:'TC',title:'Tài chính',desc:'Chuẩn bị tài chính vững chắc',items:[
+    {t:'Tiền mặt AUD đủ dùng 2–3 tuần đầu (~2.000 AUD)',p:'r',n:'Nên đổi một ít tờ mệnh giá nhỏ ($5, $10, $20) để dùng ngay khi vừa hạ cánh'},
+    {t:'Thẻ Visa / Mastercard quốc tế Debit hoặc Credit',p:'r'},
+    {t:'Đăng ký Wise để chuyển tiền quốc tế phí thấp',p:'s'},
+    {t:'Mở tài khoản ngân hàng Úc trước khi bay nếu được',p:'s',n:'CommBank, ANZ, NAB, Westpac — có thể mở online'},
+    {t:'Thông báo ngân hàng VN về việc dùng thẻ ở nước ngoài',p:'r',n:'Tránh bị chặn giao dịch bất ngờ'},
+    {t:'Lập ngân sách chi tiêu tháng đầu tại Úc',p:'o'},
+    {t:'Lưu số hotline quốc tế của ngân hàng VN',p:'r'},
+    {t:'Dự trữ một ít USD phòng trường hợp khẩn cấp',p:'s'},
+  ]},
+  {id:'m3',abbr:'HL',title:'Hành lý & Vali',desc:'Đóng gói thông minh, đúng trọng lượng',items:[
+    {t:'Vali lớn check-in — kiểm tra giới hạn cân hãng bay',p:'r'},
+    {t:'Balo xách tay carry-on tối đa 10kg',p:'r'},
+    {t:'Khóa vali TSA',p:'s',n:'An ninh sân bay Úc có thể mở kiểm tra'},
+    {t:'Nhãn hành lý ghi rõ tên, SĐT, địa chỉ tại Úc',p:'r'},
+    {t:'Túi zip đựng đồ lỏng, tối đa 100ml/chai — carry-on',p:'r',n:'Quy định an ninh hàng không quốc tế'},
+    {t:'Gối cổ cho chuyến bay dài (trên 8 tiếng)',p:'s'},
+    {t:'Bịt tai, bịt mắt ngủ, chăn mỏng cho máy bay',p:'s'},
+    {t:'Túi đựng đồ bẩn riêng biệt',p:'s'},
+    {t:'Cân hành lý mini cầm tay',p:'s',n:'Tránh phụ phí vượt cân tại sân bay'},
+  ]},
+  {id:'m4',abbr:'QA',title:'Quần áo',desc:'Phù hợp khí hậu Úc 4 mùa',items:[
+    {t:'T-shirt 7–10 cái',p:'r'},
+    {t:'Quần jeans 3–4 cái',p:'r'},
+    {t:'Jacket / áo khoác 2–3 cái',p:'r'},
+    {t:'Sweater dày 2–3 cái',p:'r',n:'Mùa đông Melbourne / Sydney xuống 5–10°C'},
+    {t:'Áo gió nhẹ / áo chống nước 1–2 cái',p:'r'},
+    {t:'Ô mini 1 cái',p:'s'},
+    {t:'Đồ thể thao 4–5 bộ',p:'r'},
+    {t:'Sneaker 4 đôi',p:'r'},
+    {t:'Giày tây 2 đôi',p:'r'},
+    {t:'Dép lê 1 đôi',p:'r'},
+    {t:'Sandal 1 đôi',p:'r'},
+    {t:'Tất 10–15 đôi',p:'r'},
+    {t:'Đồ lót 14–20 cái',p:'r'},
+    {t:'Đồ vest 1 bộ',p:'r',n:'Phỏng vấn, sự kiện nhà trường'},
+    {t:'Mũ / nón rộng vành',p:'r',n:'UV ở Úc thuộc hàng cao nhất thế giới'},
+    {t:'Kính mát UV400',p:'r',n:'Bảo vệ mắt khỏi tia cực tím mạnh'},
+  ]},
+  {id:'m5',abbr:'TM',title:'Thuốc men & Y tế',desc:'Sức khỏe là ưu tiên số 1',items:[
+    {t:'Thuốc theo đơn cá nhân — dự trữ 3+ tháng + đơn tiếng Anh',p:'r',n:'Bắt buộc khai báo khi nhập cảnh Úc'},
+    {t:'Paracetamol / Panadol — hạ sốt, giảm đau',p:'r'},
+    {t:'Ibuprofen — kháng viêm, giảm đau',p:'r'},
+    {t:'Thuốc cảm cúm tổng hợp',p:'r'},
+    {t:'Thuốc tiêu hóa — đau bụng, tiêu chảy, đầy hơi',p:'r'},
+    {t:'Thuốc dị ứng antihistamine (Cetirizine / Loratadine)',p:'r'},
+    {t:'Thuốc ho và viêm họng',p:'r'},
+    {t:'Bộ sơ cứu — băng gạc, bông, cồn sát khuẩn',p:'r'},
+    {t:'Kem bôi vết thương Betadine',p:'s'},
+    {t:'Nhiệt kế điện tử',p:'s'},
+    {t:'Vitamin tổng hợp C, D3, B-Complex',p:'s'},
+    {t:'Kem chống nắng SPF 50+',p:'r',n:'UV Index Úc có thể lên 14+ — mua thêm khi đến'},
+    {t:'Thuốc / Kem chống muỗi và côn trùng',p:'s'},
+    {t:'Nước nhỏ mắt / dung dịch rửa mắt',p:'s'},
+    {t:'Băng vệ sinh đủ dùng 1–2 tháng (dành cho nữ)',p:'r'},
+    {t:'Melatonin 1–3mg để chống jetlag',p:'s'},
+  ]},
+  {id:'m6',abbr:'DD',title:'Đồ dùng cá nhân',desc:'Vệ sinh và chăm sóc bản thân',items:[
+    {t:'Bàn chải đánh răng 2–3 cái / bàn chải điện',p:'r'},
+    {t:'Kem đánh răng',p:'r'},
+    {t:'Xà phòng / Sữa tắm',p:'r'},
+    {t:'Dầu gội + dầu xả',p:'r'},
+    {t:'Dao cạo râu / Máy cạo râu',p:'r'},
+    {t:'Lược chải tóc',p:'r'},
+    {t:'Lăn nách / deodorant',p:'s'},
+    {t:'Bộ cắt móng tay',p:'r'},
+    {t:'Nhíp',p:'r'},
+    {t:'Tăm bông',p:'r'},
+    {t:'Sữa rửa mặt + đồ skincare cá nhân',p:'r'},
+    {t:'Son dưỡng môi SPF15+',p:'s',n:'Môi dễ khô ở khí hậu Úc'},
+    {t:'Khăn tắm 2–3 cái',p:'r'},
+    {t:'Khăn lau mặt 2–3 cái',p:'r'},
+    {t:'Bông tẩy trang',p:'r'},
+    {t:'Nước hoa, dưới 100ml',p:'o'},
+  ]},
+  {id:'m7',abbr:'CN',title:'Công nghệ & Thiết bị',desc:'Thiết bị học tập, kết nối & văn phòng',items:[
+    {t:'Laptop + sạc + túi bảo vệ chống sốc',p:'r'},
+    {t:'Điện thoại + sạc + cáp USB',p:'r'},
+    {t:'Adapter ổ cắm điện Úc — Type I ba chân dẹp',p:'r',n:'Điện 230V — hoàn toàn khác ổ VN!'},
+    {t:'Ổ cắm điện đa năng nối dài có cổng USB',p:'r'},
+    {t:'Tai nghe có mic tốt — học online, họp nhóm',p:'r'},
+    {t:'Ổ cứng di động hoặc USB dự phòng',p:'r'},
+    {t:'Sạc dự phòng 10.000mAh trở lên',p:'r',n:'Kiểm tra quy định pin lithium khi mang lên máy bay'},
+    {t:'Chuột không dây',p:'r'},
+    {t:'Webcam ngoài nếu cam laptop không đủ chất lượng',p:'o'},
+    {t:'Máy tính bảng',p:'r'},
+    {t:'Đèn bàn nhỏ gọn',p:'o'},
+    {t:'Bút bi, bút chì nhiều cái',p:'r'},
+    {t:'Sổ tay, vở ghi chép 2–3 cuốn',p:'r'},
+    {t:'Thước, kéo nhỏ, dập ghim',p:'s'},
+  ]},
+  {id:'m8',abbr:'TP',title:'Thực phẩm & Gia vị',desc:'Mang đúng quy định kiểm dịch Úc',
+   warn:'CẢNH BÁO: KHÔNG được mang thịt/trứng tươi, trái cây/rau tươi, hạt có thể nảy mầm, đất. Phải KHAI BÁO trung thực tất cả thực phẩm khi nhập cảnh — phạt tối đa 2.664 AUD hoặc hủy visa nếu không khai!',
+   items:[
+    {t:'Mắm, muối, gia vị, tương các loại, mì tôm, cà phê hòa tan, món khô đóng gói kín',p:'o',n:'Khai báo với hải quan — đặc biệt hải sản khô'},
+  ]},
+  {id:'m9',abbr:'CB',title:'Chuẩn bị trước khi bay',desc:'Việc cần làm 2–4 tuần trước ngày bay',items:[
+    {t:'Đặt chỗ ở tạm thời 2–4 tuần đầu (homestay / ký túc xá / Airbnb)',p:'r'},
+    {t:'Kiểm tra giới hạn hành lý và quy định của hãng bay',p:'r'},
+    {t:'In hoặc lưu offline: visa, CoE, vé máy bay, OSHC',p:'r'},
+    {t:'Tải Google Maps offline khu vực sẽ ở tại Úc',p:'r'},
+    {t:'Cài app cần thiết trước khi bay',p:'r',n:'Google Maps · Uber / DiDi / 13cabs / Ola\nWhatsApp / Zalo · XE Currency\nOpal Travel / Moovit / Anytrip (xe công cộng Sydney)\nSEEK (tìm việc) · myGov · Flatmates.com.au'},
+    {t:'Sao lưu điện thoại và laptop lên cloud đầy đủ',p:'r'},
+    {t:'Gửi người thân giữ bản scan tất cả giấy tờ quan trọng',p:'o'},
+    {t:'Đọc kỹ quy định kiểm dịch Úc tại daff.gov.au',p:'r'},
+    {t:'Chia sẻ lịch trình bay chi tiết với người thân',p:'s'},
+    {t:'Khám răng, làm kính, tiêm vaccine trước khi đi',p:'r',n:'Chi phí nha sĩ và optician ở Úc rất cao'},
+    {t:'Dặn dò người thân về bưu phẩm, giấy tờ tại VN',p:'s'},
+    {t:'Mua SIM du lịch hoặc bật roaming để dùng khi chờ mua SIM tại Úc',p:'s'},
+  ]},
+  {id:'m10',abbr:'NC',title:'Nhập cảnh Úc',desc:'Qua cổng kiểm dịch đúng và thuận lợi',items:[
+    {t:'Điền đầy đủ Incoming Passenger Card được phát trên máy bay',p:'r'},
+    {t:'KHAI BÁO tất cả thực phẩm mang theo dù rất nhỏ',p:'r',n:'Không khai = phạt tối đa 2.664 AUD hoặc hủy visa'},
+    {t:'Không mang thịt/trứng tươi, trái cây, rau tươi, đất',p:'r'},
+    {t:'Thuốc số lượng lớn phải có đơn bác sĩ tiếng Anh kèm theo',p:'r'},
+    {t:'Có sẵn địa chỉ chỗ ở đầu tiên tại Úc',p:'r'},
+    {t:'Có CoE và thư nhập học để xuất trình nếu hải quan hỏi',p:'r'},
+  ]},
+  {id:'m11',abbr:'1W',title:'Tuần đầu tại Úc',desc:'Việc cần làm ngay sau khi đến',items:[
+    {t:'Mua SIM Úc',p:'r',n:'Woolworths Mobile / Aldi Mobile — rẻ nhất\nOptus / Telstra — sóng tốt hơn'},
+    {t:'Mở tài khoản ngân hàng Úc — mang hộ chiếu và CoE',p:'r',n:'CommBank phổ biến nhất với du học sinh VN'},
+    {t:'Đăng ký Tax File Number (TFN) online tại ato.gov.au',p:'r',n:'Cần thiết khi đi làm thêm và khai thuế'},
+    {t:'Đăng ký Orientation / Welcome Week tại trường',p:'r'},
+    {t:'Kích hoạt thẻ sinh viên và email tài khoản trường',p:'r'},
+    {t:'Mua đồ dùng thiết yếu — Kmart, Target, IKEA, op shops',p:'r'},
+    {t:'Đăng ký Opal / Myki / Go Card đi xe công cộng',p:'r'},
+    {t:'Tìm và đăng ký bác sĩ đa khoa (GP) nhận bulk-billing',p:'r',n:'Để không phải trả tiền túi, trả phí qua bảo hiểm OSHC'},
+    {t:'Lưu số khẩn cấp 000 và cài app Emergency+',p:'r',n:'000 — khẩn cấp thực sự (Police / Fire / Ambulance)\n131 444 — cảnh sát hỗ trợ chung / báo mất cắp\n132 500 — hỗ trợ thiên tai\n1800 022 222 — tư vấn sức khỏe'},
+    {t:'Làm quen khu vực: siêu thị, nhà thuốc, bến xe/tàu',p:'r'},
+    {t:'Đăng ký thư viện trường: wifi, máy tính, mượn sách',p:'r'},
+    {t:'Cài app ngân hàng Úc sau khi mở tài khoản',p:'r'},
+    {t:'Tìm siêu thị châu Á và chợ người Việt gần nhất',p:'s',n:'Cabramatta (~40 phút train) — chợ Việt lớn nhất Sydney\nBankstown (~35 phút train) — nhiều tiệm Việt, Á\nHaymarket / Chinatown (~20 phút) — siêu thị Á gần City'},
+    {t:'Bắt đầu tìm nhà thuê dài hạn — thường mất 2–4 tuần',p:'r'},
+  ]},
+  {id:'m12',abbr:'YT',title:'Y tế & Bảo hiểm tại Úc',desc:'Quyền lợi bảo hiểm và hệ thống y tế',items:[
+    {t:'Đọc kỹ hợp đồng OSHC: quyền lợi, mức khấu trừ, hotline',p:'r'},
+    {t:'Tải app của công ty OSHC: Medibank, BUPA, AHM hoặc Allianz',p:'r'},
+    {t:'Hiểu quy trình: GP khám trước → chuyên khoa → bệnh viện',p:'r',n:'Không cần giới thiệu khi đến GP lần đầu'},
+    {t:'Đăng ký GP nhận bulk-billing để khám miễn phí qua OSHC',p:'r'},
+    {t:'Biết địa chỉ bệnh viện công và phòng khám 24/7 gần nhất',p:'r'},
+    {t:'Lưu số điện thoại GP và bệnh viện vào danh bạ',p:'r'},
+    {t:'Lifeline 13 11 14 — hỗ trợ tâm lý 24/7 miễn phí',p:'s'},
+  ]},
+];
+
+// Cập nhật lại màu sắc Icon các mục theo tone nhận diện (Đỏ, Charcoal, Ochre, Navy)
+const COLS=[
+  {bg:'#fdecea',tx:'#b32b13'},{bg:'#ececec',tx:'#333333'},{bg:'#fceddf',tx:'#a84614'},
+  {bg:'#e0ebf3',tx:'#01365c'},{bg:'#f5eedc',tx:'#7a6428'},{bg:'#f5dada',tx:'#801919'},
+  {bg:'#e4e4e4',tx:'#555555'},{bg:'#fce3d5',tx:'#a13a05'},{bg:'#d9ebf8',tx:'#0f4c7a'},
+  {bg:'#e6e2e0',tx:'#4a4441'},{bg:'#fadbd8',tx:'#b01e1e'},{bg:'#dcdfe3',tx:'#2e3d49'},
+];
+
+// ── STATE ────────────────────────────────────────────────────
+const SK='dhu-uc-v3';
+let MODS=[];
+let CK=new Set();
+let CURMOD=null;
+let PENDING=null;
+let DARK=false;
+
+function loadSt(){
+  try{
+    const r=localStorage.getItem(SK);
+    if(r){const s=JSON.parse(r);CK=new Set(s.ck||[]);if(s.mods&&s.mods.length)MODS=s.mods;else MODS=DEF;}
+    else MODS=JSON.parse(JSON.stringify(DEF)); // Deep copy to avoid mutating DEF
+  }catch(e){MODS=JSON.parse(JSON.stringify(DEF));}
+}
+function saveSt(){try{localStorage.setItem(SK,JSON.stringify({ck:[...CK],mods:MODS}));}catch(e){}}
+const byId=id=>MODS.find(m=>m.id===id);
+
+// ── EXPORT / IMPORT USER DATA ────────────────────────────────
+function exportData() {
+  const data = localStorage.getItem(SK);
+  if (!data) return alert('Chưa có dữ liệu cá nhân nào để xuất!');
+  const blob = new Blob([data], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `checklist-du-hoc-uc-backup-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+}
+
+function importData(input) {
+  const f = input.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = e => {
+    try {
+      const obj = JSON.parse(e.target.result);
+      if (!obj.mods || !obj.ck) throw new Error('File JSON không đúng định dạng của Checklist');
+      localStorage.setItem(SK, e.target.result);
+      loadSt();
+      buildAll();
+      showOv();
+      alert('Đã khôi phục dữ liệu thành công!');
+    } catch (err) {
+      alert('Lỗi đọc file: ' + err.message);
+    }
+    input.value = ''; // Reset input
+  };
+  r.readAsText(f);
+}
+
+// ── PROGRESS ─────────────────────────────────────────────────
+function mp(m){const d=m.items.filter((_,i)=>CK.has(m.id+'-'+i)).length;return{d,t:m.items.length,p:m.items.length?Math.round(d/m.items.length*100):0};}
+function tp(){let d=0,t=0;MODS.forEach(m=>{const r=mp(m);d+=r.d;t+=r.t;});return{d,t,p:t?Math.round(d/t*100):0};}
+function pc(pri){let d=0,t=0;MODS.forEach(m=>m.items.forEach((it,i)=>{if(it.p===pri){t++;if(CK.has(m.id+'-'+i))d++;}}));return{d,t};}
+
+// ── SURGICAL UPDATE ──────────────────────────────────────────
+function G(id){return document.getElementById(id);}
+function upGlobal(){
+  const{d,t,p}=tp();
+  G('glN').textContent=d+'/'+t+' mục';G('glP').textContent=p+'%';G('glB').style.width=p+'%';
+  G('ovSub').textContent=MODS.length+' module · '+t+' hạng mục · Tiến độ '+p+'%';
+  const req=pc('r'),shl=pc('s'),opt=pc('o');
+  const sv=(id,v,suf)=>{const el=G(id);if(el)el.innerHTML=v+'<span>'+suf+'</span>';};
+  sv('sv0',p,'%');sv('sv1',req.d,'/'+req.t);sv('sv2',shl.d,'/'+shl.t);sv('sv3',opt.d,'/'+opt.t);
+  
+  const sv0text = G('sv0-text');
+  if(sv0text) sv0text.textContent = d + '/' + t + ' xong';
+
+  // Hiệu chỉnh đếm Tổng quan ở menu bên trái
+  const npOv = G('np-ov');
+  if(npOv) npOv.textContent = d + '/' + t + (p === 100 && t > 0 ? ' ✓' : '');
+}
+function upMod(mid){
+  const m=byId(mid);if(!m)return;
+  const{d,t,p}=mp(m);const dn=p===100 && t>0;
+  const s=(id,fn)=>{const el=G(id);if(el)fn(el);};
+  s('np-'+mid,el=>el.textContent=d+'/'+t+(dn?' ✓':''));
+  s('nb-'+mid,el=>{el.style.width=p+'%';el.classList.toggle('dn',dn);});
+  s('cp-'+mid,el=>el.textContent=d+'/'+t+' mục'+(dn?' ✓':''));
+  s('cx-'+mid,el=>el.textContent=p+'%');
+  s('cbf-'+mid,el=>{el.style.width=p+'%';el.classList.toggle('dn',dn);});
+  const cc=G('card-'+mid);if(cc)cc.classList.toggle('dn',dn);
+  s('dn-'+mid,el=>el.textContent=d+'/'+t);
+  s('dp-'+mid,el=>el.textContent=p+'% hoàn thành');
+  s('dbf-'+mid,el=>{el.style.width=p+'%';el.classList.toggle('dn',dn);});
+  upGlobal();
+}
+
+// ── TOGGLE & ADD ITEMS ───────────────────────────────────────
+function toggle(mid,i){
+  const k=mid+'-'+i;
+  CK.has(k)?CK.delete(k):CK.add(k);
+  saveSt();
+  const row=document.querySelector('[data-k="'+k+'"]');
+  if(row){const on=CK.has(k);row.classList.toggle('ck',on);row.querySelector('.chk').classList.toggle('on',on);}
+  upMod(mid);
+}
+
+function addNewItem(mid) {
+  const tEl = G('add-t-' + mid);
+  const pEl = G('add-p-' + mid);
+  const nEl = G('add-n-' + mid);
+  
+  const title = tEl.value.trim();
+  if (!title) { alert('Vui lòng nhập tên hạng mục!'); tEl.focus(); return; }
+
+  const m = byId(mid);
+  if (!m) return;
+
+  // Add item and flag it as custom (optional, useful for deleting later)
+  m.items.push({
+    t: title,
+    p: pEl.value,
+    n: nEl.value.trim() || undefined,
+    custom: true 
+  });
+
+  saveSt();
+  buildDets(); // Rebuild UI to show new item
+  upMod(mid);  // Update stats
+  showM(mid);  // Ensure view stays on current module
+}
+
+function deleteItem(e, mid, i) {
+  e.stopPropagation(); // Prevent toggling the checkbox
+  if (!confirm('Bạn có chắc muốn xóa hạng mục tự thêm này?')) return;
+  
+  const m = byId(mid);
+  if (!m) return;
+  
+  m.items.splice(i, 1);
+  
+  // Re-map the Checked list because indices shifted
+  const newCK = new Set();
+  CK.forEach(key => {
+    const [kMid, kIdxStr] = key.split('-');
+    if (kMid === mid) {
+      const kIdx = parseInt(kIdxStr);
+      if (kIdx < i) newCK.add(key); // Keep as is
+      else if (kIdx > i) newCK.add(`${mid}-${kIdx - 1}`); // Shift down
+    } else {
+      newCK.add(key);
+    }
+  });
+  CK = newCK;
+  
+  saveSt();
+  buildDets();
+  upMod(mid);
+  showM(mid);
+}
+
+// ── MARK ALL ─────────────────────────────────────────────────
+function markAll(mid,val){
+  const m=byId(mid);if(!m)return;
+  m.items.forEach((_,i)=>{const k=mid+'-'+i;val?CK.add(k):CK.delete(k);
+    const row=document.querySelector('[data-k="'+k+'"]');
+    if(row){row.classList.toggle('ck',val);row.querySelector('.chk').classList.toggle('on',val);}
+  });
+  saveSt();upMod(mid);
+}
+
+// ── FILTER / SEARCH ──────────────────────────────────────────
+function setF(mid,f){
+  G('fb-'+mid).querySelectorAll('.ft').forEach(b=>b.classList.toggle('on',b.dataset.f===f));
+  const sr=G('sr-'+mid);doFilter(mid,f,sr?sr.value:'');
+}
+function setSr(mid,v){
+  const fb=G('fb-'+mid);const af=fb.querySelector('.ft.on')?.dataset.f||'all';doFilter(mid,af,v);
+}
+function doFilter(mid,f,search){
+  const q=search.trim().toLowerCase();
+  const cont=G('items-'+mid);let vis=0;
+  cont.querySelectorAll('.item').forEach(row=>{
+    const pm=f==='all'||row.dataset.p===f;
+    const txt=(row.querySelector('.it')?.textContent||'').toLowerCase();
+    const nt=(row.querySelector('.in')?.textContent||'').toLowerCase();
+    const sm=!q||txt.includes(q)||nt.includes(q);
+    const show=pm&&sm;row.classList.toggle('hid',!show);if(show)vis++;
+  });
+  let em=cont.querySelector('.empty');
+  if(vis===0){if(!em){em=document.createElement('div');em.className='empty';cont.appendChild(em);}em.textContent='Không tìm thấy hạng mục nào.';em.style.display='';}
+  else if(em)em.style.display='none';
+}
+
+// ── DARK MODE / RESET ─────────────────────────────────────────
+function toggleDark(){DARK=!DARK;document.documentElement.toggleAttribute('data-dark',DARK);}
+function doReset(){
+  if(!confirm('Xóa toàn bộ tiến độ và khôi phục list gốc? Không thể hoàn tác.'))return;
+  CK.clear();
+  MODS=JSON.parse(JSON.stringify(DEF)); // Restore default modules (removes custom items)
+  saveSt();
+  buildAll();
+  showOv();
+}
+
+// ── NAVIGATION ───────────────────────────────────────────────
+function showV(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));const el=G(id);if(el)el.classList.add('on');}
+function upNavAct(){
+  document.querySelectorAll('.ni').forEach(el=>el.classList.remove('on'));
+  const t=CURMOD?G('ni-'+CURMOD):G('ni-ov');if(t)t.classList.add('on');
+}
+function showOv(){CURMOD=null;showV('vOv');upNavAct();closeSB();window.scrollTo({top:0,behavior:'smooth'});}
+function showM(id){CURMOD=id;showV('vDet-'+id);upNavAct();closeSB();window.scrollTo({top:0,behavior:'smooth'});}
+
+// ── BUILD DOM ────────────────────────────────────────────────
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function buildAll(){buildNav();buildOv();buildDets();upGlobal();}
+
+function buildNav(){
+  let h=`<div class="sb-sec">Tổng quan</div>
+  <button class="ni${CURMOD===null?' on':''}" id="ni-ov" onclick="showOv()">
+    <div class="ni-b" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:14px;">≡</div>
+    <div class="ni-body"><div class="ni-n">Tổng quan & thống kê</div><div class="ni-p" id="np-ov">0/0</div></div>
+  </button>
+  <div class="sb-sec">${MODS.length} Modules</div>`;
+  MODS.forEach((m,mi)=>{
+    const c=COLS[mi%COLS.length];const{d,t,p}=mp(m);
+    h+=`<button class="ni${CURMOD===m.id?' on':''}" id="ni-${m.id}" onclick="showM('${m.id}')">
+      <div class="ni-b" style="background:${c.bg};color:${c.tx};">${m.abbr}</div>
+      <div class="ni-body">
+        <div class="ni-n">${esc(m.title)}</div>
+        <div class="ni-p" id="np-${m.id}">${d}/${t}${p===100 && t>0?' ✓':''}</div>
+      </div>
+      <div class="ni-bw"><div class="ni-bar"><div class="ni-bf${p===100 && t>0?' dn':''}" id="nb-${m.id}" style="width:${p}%"></div></div></div>
+    </button>`;
+  });
+  G('nav').innerHTML=h;
+}
+
+function buildOv(){
+  const{d:td,t:tt,p:tp2}=tp();const req=pc('r'),shl=pc('s'),opt=pc('o');
+  G('stGrid').innerHTML=`
+    <div class="stat"><div class="st-l">Tổng tiến độ</div><div class="st-v" id="sv0" style="color:var(--grn)">${tp2}<span>%</span></div><div class="st-n" id="sv0-text">${td}/${tt} xong</div></div>
+    <div class="stat"><div class="st-l">Bắt buộc</div><div class="st-v" id="sv1" style="color:var(--red)">${req.d}<span>/${req.t}</span></div><div class="st-n">Phải hoàn thành 100%</div></div>
+    <div class="stat"><div class="st-l">Nên có</div><div class="st-v" id="sv2" style="color:var(--ylw)">${shl.d}<span>/${shl.t}</span></div><div class="st-n">Rất khuyến khích</div></div>
+    <div class="stat"><div class="st-l">Tùy chọn</div><div class="st-v" id="sv3" style="color:var(--grn)">${opt.d}<span>/${opt.t}</span></div><div class="st-n">Nếu có điều kiện</div></div>`;
+  let h='';
+  MODS.forEach((m,mi)=>{
+    const c=COLS[mi%COLS.length];const{d,t,p}=mp(m);
+    h+=`<div class="card${p===100 && t>0?' dn':''}" id="card-${m.id}" onclick="showM('${m.id}')">
+      <div class="ci" style="background:${c.bg};color:${c.tx};">${m.abbr}</div>
+      <div class="cn">${esc(m.title)}</div>
+      <div class="cd">${esc(m.desc||'')}</div>
+      <div class="cr"><div class="cp" id="cp-${m.id}">${d}/${t} mục${p===100 && t>0?' ✓':''}</div><div class="cx" id="cx-${m.id}">${p}%</div></div>
+      <div class="cb"><div class="cbf${p===100 && t>0?' dn':''}" id="cbf-${m.id}" style="width:${p}%"></div></div>
+    </div>`;
+  });
+  G('cGrid').innerHTML=h;
+}
+
+function buildDets(){
+  let h='';
+  MODS.forEach((m,mi)=>{
+    const c=COLS[mi%COLS.length];const{d,t,p}=mp(m);
+    const rc=m.items.filter(x=>x.p==='r').length,sc=m.items.filter(x=>x.p==='s').length,oc=m.items.filter(x=>x.p==='o').length;
+    let ih='';
+    m.items.forEach((item,i)=>{
+      const k=m.id+'-'+i;const isDone=CK.has(k);
+      const bc={r:'br',s:'bs',o:'bo'}[item.p||'s'];
+      const bl={r:'BẮT BUỘC',s:'NÊN CÓ',o:'TÙY CHỌN'}[item.p||'s'];
+      const isCustom = item.custom ? true : false;
+      
+      ih+=`<div class="item${isDone?' ck':''}" data-k="${k}" data-p="${item.p||'s'}" onclick="toggle('${m.id}',${i})">
+        <div class="chk${isDone?' on':''}"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.2 5.8L8 1" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ib"><div class="it">${esc(item.t)}</div>${item.n?'<div class="in">'+esc(item.n)+'</div>':''}</div>
+        <div class="ibdg">
+          <span class="bdg ${bc}">${bl}</span>
+          ${isCustom ? `<button class="del-btn custom-item" title="Xóa mục này" onclick="deleteItem(event, '${m.id}', ${i})">✖</button>` : ''}
+        </div>
+      </div>`;
+    });
+    
+    // Form thêm item mới
+    const addHtml = `
+      <div class="add-box">
+        <div class="add-title">✎ Thêm mục mới vào phần này</div>
+        <div class="add-row">
+          <input type="text" id="add-t-${m.id}" class="add-input" placeholder="Tên mục (VD: Chuẩn bị hình thẻ 3x4)..." onkeypress="if(event.key==='Enter') addNewItem('${m.id}')">
+          <select id="add-p-${m.id}" class="add-sel">
+            <option value="r">Bắt buộc</option>
+            <option value="s" selected>Nên có</option>
+            <option value="o">Tùy chọn</option>
+          </select>
+        </div>
+        <div class="add-row">
+          <input type="text" id="add-n-${m.id}" class="add-input" placeholder="Ghi chú thêm (Không bắt buộc)..." onkeypress="if(event.key==='Enter') addNewItem('${m.id}')">
+          <button class="btn btn-dk" onclick="addNewItem('${m.id}')">+ Thêm ngay</button>
+        </div>
+      </div>
+    `;
+
+    h+=`<div id="vDet-${m.id}" class="view">
+      <div class="ph">
+        <div><button class="bk" onclick="showOv()">← Tổng quan</button></div>
+        <div class="hbs">
+          <button class="btn btn-dk" onclick="markAll('${m.id}',true)">✓ Đánh dấu tất cả</button>
+          <button class="btn btn-rd" onclick="markAll('${m.id}',false)">↺ Bỏ chọn tất cả</button>
+        </div>
+      </div>
+      <div class="dh">
+        <div class="di" style="background:${c.bg};color:${c.tx};">${m.abbr}</div>
+        <div class="dinfo"><div class="dt">${esc(m.title)}</div><div class="ds">${esc(m.desc||'')}</div></div>
+        <div class="dp"><div class="dn2" id="dn-${m.id}">${d}/${t}</div><div class="dpx" id="dp-${m.id}">${p}% hoàn thành</div></div>
+      </div>
+      <div class="db"><div class="dbf${p===100 && t>0?' dn':''}" id="dbf-${m.id}" style="width:${p}%"></div></div>
+      ${m.warn?`<div class="wb"><div style="font-size:14px;flex-shrink:0;margin-top:1px">⚠️</div><div><strong>Lưu ý:</strong> ${esc(m.warn)}</div></div>`:''}
+      <div class="fb" id="fb-${m.id}">
+        <span class="fbl">Lọc:</span>
+        <button class="ft on" data-f="all" onclick="setF('${m.id}','all')">Tất cả (${m.items.length})</button>
+        ${rc?`<button class="ft" data-f="r" onclick="setF('${m.id}','r')">Bắt buộc (${rc})</button>`:''}
+        ${sc?`<button class="ft" data-f="s" onclick="setF('${m.id}','s')">Nên có (${sc})</button>`:''}
+        ${oc?`<button class="ft" data-f="o" onclick="setF('${m.id}','o')">Tùy chọn (${oc})</button>`:''}
+        <input class="sr" type="search" placeholder="Tìm kiếm..." id="sr-${m.id}" oninput="setSr('${m.id}',this.value)">
+      </div>
+      <div class="items" id="items-${m.id}">${ih}</div>
+      ${addHtml}
+    </div>`;
+  });
+  G('vDets').innerHTML=h;
+}
+
+// ── BULK IMPORT ───────────────────────────────────────────────
+function openImp(){PENDING=null;G('applyBtn').disabled=true;G('applyBtn').style.opacity='.4';G('pta').value='';G('pr').style.display='none';G('imod').classList.add('on');}
+function closeImp(){G('imod').classList.remove('on');}
+G('imod').addEventListener('click',e=>{if(e.target===G('imod'))closeImp();});
+
+G('fi').addEventListener('change',function(){
+  if(!this.files.length)return;
+  const r=new FileReader();r.onload=e=>{G('pta').value=e.target.result;previewImp();};r.readAsText(this.files[0],'utf-8');
+});
+const fzEl=G('fz');
+fzEl.addEventListener('dragover',e=>{e.preventDefault();fzEl.classList.add('dg');});
+fzEl.addEventListener('dragleave',()=>fzEl.classList.remove('dg'));
+fzEl.addEventListener('drop',e=>{e.preventDefault();fzEl.classList.remove('dg');const f=e.dataTransfer.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{G('pta').value=ev.target.result;previewImp();};r.readAsText(f,'utf-8');});
+
+function parseImpText(text){
+  const lines=text.split(/\r?\n/).filter(l=>l.trim());
+  if(lines.length<2)throw new Error('Cần ít nhất 2 dòng (header + data)');
+  const sep=lines[0].includes('\t')?'\t':',';
+  const hdr=lines[0].split(sep).map(h=>h.trim().toLowerCase().replace(/['"]/g,''));
+  const ci=names=>{for(const n of names){const i=hdr.indexOf(n);if(i>=0)return i;}return -1;};
+  const iM=ci(['module','tên module','ten module']);
+  const iD=ci(['chi tiết','chi tiet','chi_tiết','detail','nội dung']);
+  const iP=ci(['phân loại','phan loai','phân_loại','priority','loại']);
+  const iN=ci(['ghi chú','ghi chu','note','notes']);
+  const iW=ci(['cảnh báo module','canh bao','warning','warn']);
+  if(iM<0)throw new Error('Không tìm thấy cột "Module"');
+  if(iD<0)throw new Error('Không tìm thấy cột "Chi tiết"');
+  function pLine(line){
+    const res=[];let cur='',inQ=false;
+    for(let i=0;i<line.length;i++){if(line[i]==='"'){inQ=!inQ;continue;}if(!inQ&&line[i]===sep){res.push(cur.trim());cur='';continue;}cur+=line[i];}
+    res.push(cur.trim());return res;
+  }
+  const pm={'bắt buộc':'r','bat buoc':'r','required':'r','r':'r','nên có':'s','nen co':'s','should':'s','s':'s','tùy chọn':'o','tuy chon':'o','optional':'o','o':'o'};
+  const mm={},mo=[];
+  for(let li=1;li<lines.length;li++){
+    const cols=pLine(lines[li]);
+    const mn=(cols[iM]||'').trim(),det=(cols[iD]||'').trim();
+    if(!mn||!det)continue;
+    const pri=pm[(iP>=0?(cols[iP]||'').trim().toLowerCase():'')] || 's';
+    const note=iN>=0?(cols[iN]||'').trim():'';
+    const warn=iW>=0?(cols[iW]||'').trim():'';
+    if(!mm[mn]){mm[mn]={items:[],warn:''};mo.push(mn);}
+    if(warn)mm[mn].warn=warn;
+    mm[mn].items.push({t:det,p:pri,n:note||undefined});
+  }
+  if(mo.length===0)throw new Error('Không tìm thấy dữ liệu hợp lệ');
+  return mo.map((title,i)=>{
+    const ex=MODS.find(m=>m.title===title);
+    const abbr=ex?ex.abbr:title.split(/\s+/).slice(0,2).map(w=>w[0]||'').join('').toUpperCase()||String(i+1);
+    return{id:ex?ex.id:'m_new_'+i+'_'+Date.now(),abbr,title,desc:ex?ex.desc||'':'',warn:mm[title].warn||(ex?ex.warn||'':''),items:mm[title].items};
+  });
+}
+
+function previewImp(){
+  const text=G('pta').value.trim();const pr=G('pr');const ab=G('applyBtn');
+  if(!text){pr.textContent='Chưa có dữ liệu.';pr.className='pr er';pr.style.display='block';ab.disabled=true;ab.style.opacity='.4';return;}
+  try{
+    const mods=parseImpText(text);
+    const tot=mods.reduce((s,m)=>s+m.items.length,0);
+    PENDING=mods;
+    pr.textContent=`✓ Đọc thành công: ${mods.length} module · ${tot} hạng mục. Nhấn "Áp dụng" để cập nhật.`;
+    pr.className='pr ok';pr.style.display='block';ab.disabled=false;ab.style.opacity='1';
+  }catch(e){
+    PENDING=null;pr.textContent='✗ Lỗi: '+e.message;pr.className='pr er';pr.style.display='block';ab.disabled=true;ab.style.opacity='.4';
+  }
+}
+
+function applyImp(){
+  if(!PENDING)return;MODS=PENDING;saveSt();closeImp();buildAll();showOv();
+}
+
+// ── MOBILE ───────────────────────────────────────────────────
+function closeSB(){G('sb').classList.remove('op');G('ov').classList.remove('on');}
+G('mnb').addEventListener('click',()=>{G('sb').classList.toggle('op');G('ov').classList.toggle('on');});
+G('ov').addEventListener('click',closeSB);
+
+// ── INIT ─────────────────────────────────────────────────────
+loadSt();buildAll();showOv();
+</script>
+</body>
+</html>
